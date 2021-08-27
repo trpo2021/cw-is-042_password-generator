@@ -1,1 +1,2 @@
-# cw-is-042_password-generator
+# password-generator
+### Консольный генератор паролей
