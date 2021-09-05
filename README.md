@@ -1,10 +1,10 @@
-<h1 align="center"> password-generator</h1>
-<h3 align="center"style>Генератор паролей</h3>
+<h1 align="center"> Password Generator</h1>
+<h3 align="center"style>Генератор паролей на C++</h3>
 <p align="center"><img src="img/log.png"></p>
 
 ---
 
-Генератор паролей password-generator – консольное приложение, позволяющее
+Генератор паролей Password Generator – консольное приложение, позволяющее
 - генерировать криптоустойчивые пароли;
 - определять коэффициент надёжности сгенерированных паролей;
 - сохранять результат работы в текстовый файл.
