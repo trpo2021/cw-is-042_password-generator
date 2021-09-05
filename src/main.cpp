@@ -23,7 +23,7 @@ int main()
     srand((unsigned)time(NULL));
 
     setlocale(LC_ALL, "");   
-    // Для отображения кириллицы в string
+    // Р”Р»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ РєРёСЂРёР»Р»РёС†С‹ 
     SetConsoleOutputCP(1251);
     SetConsoleCP(1251);
 
@@ -44,8 +44,8 @@ int main()
     if (need_file())
     {
         use_file = true;
-        cout << " Введите имя файла для записи результата работы — ";
-        getline(cin, filename); // полностью извлекаем строку в переменную filename
+        cout << " Р’РІРµРґРёС‚Рµ РёРјСЏ С„Р°Р№Р»Р° РґР»СЏ Р·Р°РїРёСЃРё СЂРµР·СѓР»СЊС‚Р°С‚Р° СЂР°Р±РѕС‚С‹ вЂ” ";
+        getline(cin, filename); // РїРѕР»РЅРѕСЃС‚СЊСЋ РёР·РІР»РµРєР°РµРј СЃС‚СЂРѕРєСѓ РІ РїРµСЂРµРјРµРЅРЅСѓСЋ filename
         if (filename.empty())
             filename = "result.txt";
         else
@@ -54,23 +54,23 @@ int main()
     else
         use_file = false;
 
-    cout << "Началась генерация паролей.\n" << endl;
-    cout << "Результат работы:" << endl;
+    cout << "РќР°С‡Р°Р»Р°СЃСЊ РіРµРЅРµСЂР°С†РёСЏ РїР°СЂРѕР»РµР№.\n" << endl;
+    cout << "Р РµР·СѓР»СЊС‚Р°С‚ СЂР°Р±РѕС‚С‹:" << endl;
 
     if (use_file)
     {
         ofstream outFile(filename);
-        outFile << " Результат работы Password Generator:\n" << endl;
-        outFile << " 1. Длина пароля — " << length_password << endl;
-        outFile << " 2. Количество сгенерированных паролей — " << amount_of_passwords << endl;
+        outFile << " Р РµР·СѓР»СЊС‚Р°С‚ СЂР°Р±РѕС‚С‹ Password Generator:\n" << endl;
+        outFile << " 1. Р”Р»РёРЅР° РїР°СЂРѕР»СЏ вЂ” " << length_password << endl;
+        outFile << " 2. РљРѕР»РёС‡РµСЃС‚РІРѕ СЃРіРµРЅРµСЂРёСЂРѕРІР°РЅРЅС‹С… РїР°СЂРѕР»РµР№ вЂ” " << amount_of_passwords << endl;
         if (special_chars)
-            outFile << " 3. Использование специальных символов — Да" << endl;
+            outFile << " 3. РСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ СЃРїРµС†РёР°Р»СЊРЅС‹С… СЃРёРјРІРѕР»РѕРІ вЂ” Р”Р°" << endl;
         else
-            outFile << " 3. Использование специальных символов — Нет" << endl;
+            outFile << " 3. РСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ СЃРїРµС†РёР°Р»СЊРЅС‹С… СЃРёРјРІРѕР»РѕРІ вЂ” РќРµС‚" << endl;
         if (use_calc_safety)
-            outFile << " 4. Вычисление надёжности — Да\n" << endl;
+            outFile << " 4. Р’С‹С‡РёСЃР»РµРЅРёРµ РЅР°РґС‘Р¶РЅРѕСЃС‚Рё вЂ” Р”Р°\n" << endl;
         else
-            outFile << " 4. Вычисление надёжности — Нет\n" << endl;
+            outFile << " 4. Р’С‹С‡РёСЃР»РµРЅРёРµ РЅР°РґС‘Р¶РЅРѕСЃС‚Рё вЂ” РќРµС‚\n" << endl;
 
         for (int k = 0; k < amount_of_passwords; k++) {
             for (int i = 0; i < length_password; ++i) {
@@ -85,12 +85,12 @@ int main()
         if (use_calc_safety)
         {
             if (special_chars)
-                outFile << "\nНадёжность (бит): " << length_password * log2(77) << endl;
+                outFile << "\nРќР°РґС‘Р¶РЅРѕСЃС‚СЊ (Р±РёС‚): " << length_password * log2(77) << endl;
             else
-                outFile << "\nНадёжность (бит): " << length_password * log2(62) << endl;
+                outFile << "\nРќР°РґС‘Р¶РЅРѕСЃС‚СЊ (Р±РёС‚): " << length_password * log2(62) << endl;
         }
 
-        outFile << "\n Работа программы успешно завершена." << endl;
+        outFile << "\n Р Р°Р±РѕС‚Р° РїСЂРѕРіСЂР°РјРјС‹ СѓСЃРїРµС€РЅРѕ Р·Р°РІРµСЂС€РµРЅР°." << endl;
         outFile.close();
     }
     else
@@ -108,17 +108,17 @@ int main()
     {
         if (special_chars)
         {
-            cout << "\nНадёжность (бит): " << length_password * log2(77) << endl;
-            cout << "Работа программы успешно завершена.\n" << endl;
+            cout << "\nРќР°РґС‘Р¶РЅРѕСЃС‚СЊ (Р±РёС‚): " << length_password * log2(77) << endl;
+            cout << "Р Р°Р±РѕС‚Р° РїСЂРѕРіСЂР°РјРјС‹ СѓСЃРїРµС€РЅРѕ Р·Р°РІРµСЂС€РµРЅР°.\n" << endl;
         }
         else
         {
-            cout << "\nНадёжность (бит): " << length_password * log2(62) << endl;
-            cout << "Работа программы успешно завершена.\n" << endl;
+            cout << "\nРќР°РґС‘Р¶РЅРѕСЃС‚СЊ (Р±РёС‚): " << length_password * log2(62) << endl;
+            cout << "Р Р°Р±РѕС‚Р° РїСЂРѕРіСЂР°РјРјС‹ СѓСЃРїРµС€РЅРѕ Р·Р°РІРµСЂС€РµРЅР°.\n" << endl;
         }
     }        
     else
-        cout << "Работа программы успешно завершена.\n" << endl;
+        cout << "Р Р°Р±РѕС‚Р° РїСЂРѕРіСЂР°РјРјС‹ СѓСЃРїРµС€РЅРѕ Р·Р°РІРµСЂС€РµРЅР°.\n" << endl;
 
     system("pause");
     return 0;
@@ -170,7 +170,7 @@ void password_generator(int length_password)
         }
 
         for (int i = number_of_special_chars; i < number_of_special_chars + number_of_numeral; ++i) {
-            //Переполнение буфера при записи в password
+            //РџРµСЂРµРїРѕР»РЅРµРЅРёРµ Р±СѓС„РµСЂР° РїСЂРё Р·Р°РїРёСЃРё РІ password
             password[i] = char(rand() % 10 + 48);
         }
 
