@@ -11,7 +11,7 @@ LDFLAGS =
 APPNAME = test
 EXT = .cpp
 SRCDIR = src
-OBJDIR = obj
+OBJDIR = object
 
 ############## Do not change anything from here downwards! #############
 SRC = $(wildcard $(SRCDIR)/*$(EXT))
