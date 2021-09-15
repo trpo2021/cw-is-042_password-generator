@@ -10,9 +10,9 @@ void output_program_header()
     cout << "Для генерации паролей введите следующие данные:" << endl;
 }
 
-int check_numeric_password(int num)
+int check_numeric_password(int p)
 {
-    int numeric = num;
+    int numeric = p;
 
     if (numeric == 0 || numeric < 0)
     {
@@ -41,10 +41,27 @@ int get_length_password()
             cin.clear();
             cin.ignore(32767, '\n');
             cout << "Длина пароля задаётся числом\n";
-            return 0;
         }
         else if (check_numeric_password(length_password) != 0)
             return length_password;
+    }
+}
+
+int check_numeric_amount(int a)
+{
+    int num = a;
+
+    if (num == 0 || num < 0)
+    {
+        cin.clear();
+        cin.ignore(32767, '\n');
+        cout << "Количество генерируемых паролей задаётся положительным числом\n";
+        return 0;
+    }
+    else
+    {
+        cin.ignore(32767, '\n');
+        return num;
     }
 }
 
@@ -62,7 +79,7 @@ int get_amount_of_passwords()
             cin.ignore(32767, '\n');
             cout << "Количество генерируемых паролей задаётся числом\n";
         }
-        else if (check_numeric_password(amount_of_passwords) != 0)
+        else if (check_numeric_amount(amount_of_passwords) != 0)
             return amount_of_passwords;
     }
 }

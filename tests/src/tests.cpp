@@ -9,6 +9,13 @@ TEST_CASE("check_numeric_password")
 	CHECK(check_numeric_password(-1) == 0);
 }
 
+TEST_CASE("check_numeric_amount")
+{
+	CHECK(check_numeric_amount(1) == 1);
+	CHECK(check_numeric_amount(0) == 0);
+	CHECK(check_numeric_amount(-1) == 0);
+}
+
 TEST_CASE("check_special_chars")
 {
 	REQUIRE(check_special_chars(89) == true);

@@ -3,8 +3,9 @@
 
 void output_program_header();
 int get_length_password();
-int check_numeric_password(int num);
+int check_numeric_password(int p);
 int get_amount_of_passwords();
+int check_numeric_amount(int a);
 bool get_special_chars();
 bool check_special_chars(char check_sc);
 bool calc_safety();
