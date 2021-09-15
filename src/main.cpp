@@ -6,7 +6,7 @@
 #include <cmath>
 #include <string>
 #include <fstream>
-#include "header.h"
+#include "include/header.h"
 #include <Windows.h>
 
 using namespace std;
@@ -23,7 +23,6 @@ int main()
     srand((unsigned)time(NULL));
 
     setlocale(LC_ALL, "");   
-    // ƒл€ отображени€ кириллицы в string
     SetConsoleOutputCP(1251);
     SetConsoleCP(1251);
 
@@ -45,7 +44,7 @@ int main()
     {
         use_file = true;
         cout << " ¬ведите им€ файла дл€ записи результата работы Ч ";
-        getline(cin, filename); // полностью извлекаем строку в переменную filename
+        getline(cin, filename);
         if (filename.empty())
             filename = "result.txt";
         else
@@ -132,8 +131,6 @@ void password_generator(int length_password)
         int balance_rand = length_password - number_of_small_chars;
         number_of_big_chars = rand() % balance_rand;
         number_of_numeral = length_password - number_of_small_chars - number_of_big_chars;
-
-        //assert(number_of_numeral + number_of_big_chars <= length_password);
     }
     else
     {
@@ -170,7 +167,6 @@ void password_generator(int length_password)
         }
 
         for (int i = number_of_special_chars; i < number_of_special_chars + number_of_numeral; ++i) {
-            //ѕереполнение буфера при записи в password
             password[i] = char(rand() % 10 + 48);
         }
 
