@@ -3,7 +3,8 @@
 <p align="center"><img src="img/log.png"></p>
 
 ---
-<h4 align="center"style>Status of Last Deployment: <img src="https://github.com/trpo2021/cw-is-042_password-generator/workflows/My-Project/badge.svg?branch=main"></h4>
+<h4 align="right"style>Status of Last Deployment:</h4>
+<p align="right"><img src="https://github.com/trpo2021/cw-is-042_password-generator/workflows/My-Project/badge.svg?branch=main"></p>
 
 ---
 
