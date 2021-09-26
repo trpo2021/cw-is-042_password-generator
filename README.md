@@ -4,7 +4,7 @@
 
 ---
 Status of Last Deployment:<br>
-<img src="https://github.com/trpo2021/cw-is-042_password-generator/workflows/My-Project/badge.svg?branch=main">
+<img src="https://github.com/trpo2021/cw-is-042_password-generator/workflows/My-Project/badge.svg?branch=main"><br>
 ---
 
 Генератор паролей Password Generator – консольное приложение, позволяющее
