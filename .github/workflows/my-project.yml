@@ -3,6 +3,9 @@
 #------------------------------
 
 name: My-Project
+env:
+  APPLICATION_NAME    : "PasswordGenerator"
+  DEPLOY_PACKAGE_NAME : "pg-deploy-ver-${{ github.sha }}"
 
 on:
   push:
@@ -15,6 +18,12 @@ jobs:
     steps:
       - name: Print Hello Message in Testing
         run: echo "Hello from Testing job"
+        
+      - name: Execute few commands
+        run: |
+          echo "Hello Message1"
+          echo "Hello Message2"
+          echo "Application name: ${{ env.APPLICATION_NAME }}"
 
   my_deploy:
     runs-on: ubuntu-latest
@@ -23,3 +32,6 @@ jobs:
     steps:
       - name: Print Hello Message in Deploy
         run: echo "Hello from Deploy job"
+        
+      - name: Printing Deployment package
+        run: echo "Deploy package name is ${{ env.DEPLOY_PACKAGE_NAME }}"
