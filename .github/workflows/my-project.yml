@@ -35,3 +35,19 @@ jobs:
         
       - name: Build application
         run: mingw32-make
+        
+  deploy_tests:
+    runs-on: windows-latest
+    needs: [deploy_project]
+    
+    steps:
+      - name: Git clone my repo
+        uses: actions/checkout@v1
+        
+      - name: Go to tests
+        run: cd tests
+        
+      - name: Expand the tree tests
+        run : dir 
+        
+        
