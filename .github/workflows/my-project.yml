@@ -1,11 +1,10 @@
-#------------------------------
-# GitHub Action Part-1
-#------------------------------
+#----------------
+# GitHub Action
+#----------------
 
 name: My-Project
 env :
   APPLICATION_NAME    : "PasswordGenerator"
-  DEPLOY_PACKAGE_NAME : "pg-deploy-ver-${{ github.sha }}"
 
 on:
   push:
