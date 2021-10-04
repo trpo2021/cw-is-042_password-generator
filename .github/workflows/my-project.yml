@@ -31,5 +31,8 @@ jobs:
       - name: Lets test some packages if they are here 1
         run : mingw32-make --version 
         
+      - name: Git clone my repo
+        uses: actions/checkout@v1
+        
       - name: Build application
         run: mingw32-make
