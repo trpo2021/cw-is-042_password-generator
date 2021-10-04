@@ -4,8 +4,6 @@
 
 ---
 [![Last Deployment](https://github.com/trpo2021/cw-is-042_password-generator/actions/workflows/my-project.yml/badge.svg?branch=main)](https://github.com/trpo2021/cw-is-042_password-generator/actions/workflows/my-project.yml)
-<h4 align="right"style>Status of Last Deployment:</h4>
-<p align="right"><img src="https://github.com/trpo2021/cw-is-042_password-generator/workflows/My-Project/badge.svg?branch=main"></p>
 
 ---
 
