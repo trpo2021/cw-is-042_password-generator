@@ -42,7 +42,7 @@ jobs:
 
     steps:                             
       - name: Go to tests 
-        run: cd tests
+        run: /tests
         
       - name: Expand the tree
         run : dir      
