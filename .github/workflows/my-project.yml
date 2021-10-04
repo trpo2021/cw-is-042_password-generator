@@ -35,7 +35,3 @@ jobs:
         
       - name: Build application
         run: mingw32-make
-
-  deploy_tests:
-    runs-on   : windows-latest
-    needs     : [deploy_project]   
