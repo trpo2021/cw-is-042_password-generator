@@ -12,8 +12,8 @@ on:
     branches: [ main ]
 
 jobs:
-  my_testing:
-    runs-on : windows-latest
+  deploy_project:
+    runs-on     : windows-latest
 
     steps:       
       - name: Greeting
@@ -34,4 +34,15 @@ jobs:
         run : dir                 
         
       - name: Build application
+        run: mingw32-make
+
+  deploy_tests:
+    runs-on   : windows-latest
+    needs     : [deploy_project]
+
+    steps:                             
+      - name: Go to tests 
+        run: cd tests
+        
+      - name: Build tests
         run: mingw32-make
