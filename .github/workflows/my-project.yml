@@ -21,8 +21,7 @@ jobs:
         
       - name: Execute few commands
         run : |
-          echo "Hello Message1"
-          echo "Hello Message2"
+          echo "Welcome"
           echo "Application name: ${{ env.APPLICATION_NAME }}"
           
       - name: Lets test some packages if they are here 1
