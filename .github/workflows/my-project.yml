@@ -15,19 +15,16 @@ jobs:
   my_testing:
     runs-on : windows-latest
 
-    steps:
-      - name: Print Hello Message in Testing
-        run : echo "Hello from Testing job"
-        
-      - name: Execute few commands
+    steps:       
+      - name: Greeting
         run : |
           echo "Welcome"
           echo "Application name: ${{ env.APPLICATION_NAME }}"
           
-      - name: Lets test some packages if they are here 1
+      - name: Lets test g++
         run : g++ --version
         
-      - name: Lets test some packages if they are here 1
+      - name: Lets test make for Windows
         run : mingw32-make --version 
         
       - name: Git clone my repo
