@@ -25,3 +25,5 @@ jobs:
           echo "Hello Message2"
           echo "Application name: ${{ env.APPLICATION_NAME }}"
           
+      - name: Lets test some packages if they are here 1
+        run : g++ --version 
