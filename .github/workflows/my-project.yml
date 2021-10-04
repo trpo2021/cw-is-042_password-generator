@@ -50,4 +50,7 @@ jobs:
       - name: Expand the tree tests
         run : dir 
         
+      - name: Build tests
+        run: mingw32-make
+        
         
