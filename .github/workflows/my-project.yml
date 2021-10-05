@@ -1,8 +1,4 @@
-#----------------
-# GitHub Action
-#----------------
-
-name: My-Project
+name: Build
 env :
   APPLICATION_NAME: "PasswordGenerator"
 
