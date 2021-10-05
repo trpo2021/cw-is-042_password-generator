@@ -12,13 +12,13 @@ on:
 
 jobs:
   check:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
 
       - name: Check codestyle
-        run: git ls-files *.{cpp,h} | xargs clang-format -i --verbose && git diff --exit-code
+        run: git ls-files src.{cpp,h} | xargs clang-format -i --verbose && git diff --exit-code
 
   deploy_project:
     runs-on     : windows-latest
