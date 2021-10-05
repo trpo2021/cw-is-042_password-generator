@@ -18,7 +18,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Check codestyle
-        run: git ls-files src.{cpp,h} | xargs clang-format -i --verbose && git diff --exit-code
+        run: git ls-files *.{c,h} | xargs clang-format -i && git diff --exit-code
 
   deploy_project:
     runs-on     : windows-latest
