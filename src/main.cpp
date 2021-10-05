@@ -43,7 +43,7 @@ int main()
     if (need_file())
     {
         use_file = true;
-        cout << " Ââåäèòå èìÿ ôàéëà äëÿ çàïèñè ðåçóëüòàòà ðàáîòû — ";
+        cout << " Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð¼Ñ Ñ„Ð°Ð¹Ð»Ð° Ð´Ð»Ñ Ð·Ð°Ð¿Ð¸ÑÐ¸ Ñ€ÐµÐ·ÑƒÐ»ÑŒÑ‚Ð°Ñ‚Ð° Ñ€Ð°Ð±Ð¾Ñ‚Ñ‹ â€” ";
         getline(cin, filename);
         if (filename.empty())
             filename = "result.txt";
@@ -53,23 +53,23 @@ int main()
     else
         use_file = false;
 
-    cout << "Íà÷àëàñü ãåíåðàöèÿ ïàðîëåé.\n" << endl;
-    cout << "Ðåçóëüòàò ðàáîòû:" << endl;
+    cout << "ÐÐ°Ñ‡Ð°Ð»Ð°ÑÑŒ Ð³ÐµÐ½ÐµÑ€Ð°Ñ†Ð¸Ñ Ð¿Ð°Ñ€Ð¾Ð»ÐµÐ¹.\n" << endl;
+    cout << "Ð ÐµÐ·ÑƒÐ»ÑŒÑ‚Ð°Ñ‚ Ñ€Ð°Ð±Ð¾Ñ‚Ñ‹:" << endl;
 
     if (use_file)
     {
         ofstream outFile(filename);
-        outFile << " Ðåçóëüòàò ðàáîòû Password Generator:\n" << endl;
-        outFile << " 1. Äëèíà ïàðîëÿ — " << length_password << endl;
-        outFile << " 2. Êîëè÷åñòâî ñãåíåðèðîâàííûõ ïàðîëåé — " << amount_of_passwords << endl;
+        outFile << " Ð ÐµÐ·ÑƒÐ»ÑŒÑ‚Ð°Ñ‚ Ñ€Ð°Ð±Ð¾Ñ‚Ñ‹ Password Generator:\n" << endl;
+        outFile << " 1. Ð”Ð»Ð¸Ð½Ð° Ð¿Ð°Ñ€Ð¾Ð»Ñ â€” " << length_password << endl;
+        outFile << " 2. ÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÐ³ÐµÐ½ÐµÑ€Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð½Ñ‹Ñ… Ð¿Ð°Ñ€Ð¾Ð»ÐµÐ¹ â€” " << amount_of_passwords << endl;
         if (special_chars)
-            outFile << " 3. Èñïîëüçîâàíèå ñïåöèàëüíûõ ñèìâîëîâ — Äà" << endl;
+            outFile << " 3. Ð˜ÑÐ¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ð½Ð¸Ðµ ÑÐ¿ÐµÑ†Ð¸Ð°Ð»ÑŒÐ½Ñ‹Ñ… ÑÐ¸Ð¼Ð²Ð¾Ð»Ð¾Ð² â€” Ð”Ð°" << endl;
         else
-            outFile << " 3. Èñïîëüçîâàíèå ñïåöèàëüíûõ ñèìâîëîâ — Íåò" << endl;
+            outFile << " 3. Ð˜ÑÐ¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ð½Ð¸Ðµ ÑÐ¿ÐµÑ†Ð¸Ð°Ð»ÑŒÐ½Ñ‹Ñ… ÑÐ¸Ð¼Ð²Ð¾Ð»Ð¾Ð² â€” ÐÐµÑ‚" << endl;
         if (use_calc_safety)
-            outFile << " 4. Âû÷èñëåíèå íàä¸æíîñòè — Äà\n" << endl;
+            outFile << " 4. Ð’Ñ‹Ñ‡Ð¸ÑÐ»ÐµÐ½Ð¸Ðµ Ð½Ð°Ð´Ñ‘Ð¶Ð½Ð¾ÑÑ‚Ð¸ â€” Ð”Ð°\n" << endl;
         else
-            outFile << " 4. Âû÷èñëåíèå íàä¸æíîñòè — Íåò\n" << endl;
+            outFile << " 4. Ð’Ñ‹Ñ‡Ð¸ÑÐ»ÐµÐ½Ð¸Ðµ Ð½Ð°Ð´Ñ‘Ð¶Ð½Ð¾ÑÑ‚Ð¸ â€” ÐÐµÑ‚\n" << endl;
 
         for (int k = 0; k < amount_of_passwords; k++) {
             for (int i = 0; i < length_password; ++i) {
@@ -84,12 +84,12 @@ int main()
         if (use_calc_safety)
         {
             if (special_chars)
-                outFile << "\nÍàä¸æíîñòü (áèò): " << length_password * log2(77) << endl;
+                outFile << "\nÐÐ°Ð´Ñ‘Ð¶Ð½Ð¾ÑÑ‚ÑŒ (Ð±Ð¸Ñ‚): " << length_password * log2(77) << endl;
             else
-                outFile << "\nÍàä¸æíîñòü (áèò): " << length_password * log2(62) << endl;
+                outFile << "\nÐÐ°Ð´Ñ‘Ð¶Ð½Ð¾ÑÑ‚ÑŒ (Ð±Ð¸Ñ‚): " << length_password * log2(62) << endl;
         }
 
-        outFile << "\n Ðàáîòà ïðîãðàììû óñïåøíî çàâåðøåíà." << endl;
+        outFile << "\n Ð Ð°Ð±Ð¾Ñ‚Ð° Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ñ‹ ÑƒÑÐ¿ÐµÑˆÐ½Ð¾ Ð·Ð°Ð²ÐµÑ€ÑˆÐµÐ½Ð°." << endl;
         outFile.close();
     }
     else
@@ -107,17 +107,17 @@ int main()
     {
         if (special_chars)
         {
-            cout << "\nÍàä¸æíîñòü (áèò): " << length_password * log2(77) << endl;
-            cout << "Ðàáîòà ïðîãðàììû óñïåøíî çàâåðøåíà.\n" << endl;
+            cout << "\nÐÐ°Ð´Ñ‘Ð¶Ð½Ð¾ÑÑ‚ÑŒ (Ð±Ð¸Ñ‚): " << length_password * log2(77) << endl;
+            cout << "Ð Ð°Ð±Ð¾Ñ‚Ð° Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ñ‹ ÑƒÑÐ¿ÐµÑˆÐ½Ð¾ Ð·Ð°Ð²ÐµÑ€ÑˆÐµÐ½Ð°.\n" << endl;
         }
         else
         {
-            cout << "\nÍàä¸æíîñòü (áèò): " << length_password * log2(62) << endl;
-            cout << "Ðàáîòà ïðîãðàììû óñïåøíî çàâåðøåíà.\n" << endl;
+            cout << "\nÐÐ°Ð´Ñ‘Ð¶Ð½Ð¾ÑÑ‚ÑŒ (Ð±Ð¸Ñ‚): " << length_password * log2(62) << endl;
+            cout << "Ð Ð°Ð±Ð¾Ñ‚Ð° Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ñ‹ ÑƒÑÐ¿ÐµÑˆÐ½Ð¾ Ð·Ð°Ð²ÐµÑ€ÑˆÐµÐ½Ð°.\n" << endl;
         }
     }        
     else
-        cout << "Ðàáîòà ïðîãðàììû óñïåøíî çàâåðøåíà.\n" << endl;
+        cout << "Ð Ð°Ð±Ð¾Ñ‚Ð° Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ñ‹ ÑƒÑÐ¿ÐµÑˆÐ½Ð¾ Ð·Ð°Ð²ÐµÑ€ÑˆÐµÐ½Ð°.\n" << endl;
 
     system("pause");
     return 0;
