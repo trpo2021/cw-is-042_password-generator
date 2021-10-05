@@ -1,0 +1,61 @@
+name: Build
+env :
+  APPLICATION_NAME: "PasswordGenerator"
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Check codestyle
+        run: git ls-files *.{c,h} | xargs clang-format -i && git diff --exit-code
+
+  deploy_project:
+    runs-on     : windows-latest
+    needs       : [check]
+
+    steps:       
+      - name: Greeting
+        run : |
+          echo "Welcome"
+          echo "Application name: ${{ env.APPLICATION_NAME }}"
+          
+      - name: Lets test g++
+        run : g++ --version
+        
+      - name: Lets test make for Windows
+        run : mingw32-make --version 
+        
+      - name: Git clone my repo
+        uses: actions/checkout@v1
+        
+      - name: Expand the tree
+        run : dir                 
+        
+      - name: Build application
+        run: mingw32-make
+        
+  deploy_tests:
+    runs-on: windows-latest
+    needs: [deploy_project]
+    defaults:
+      run:
+        working-directory: tests
+    
+    steps:
+      - name: Git clone my repo
+        uses: actions/checkout@v1
+               
+      - name: Expand the tree tests
+        run : dir 
+        
+      - name: Build tests
+        run: mingw32-make
+        
+        

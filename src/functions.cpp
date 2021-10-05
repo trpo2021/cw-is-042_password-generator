@@ -6,8 +6,8 @@ using std::endl;
 
 void output_program_header()
 {
-    cout << "ÃÅÍÅÐÀÒÎÐ ÏÀÐÎËÅÉ\n" << endl;
-    cout << "Äëÿ ãåíåðàöèè ïàðîëåé ââåäèòå ñëåäóþùèå äàííûå:" << endl;
+    cout << "Ð“Ð•ÐÐ•Ð ÐÐ¢ÐžÐ  ÐŸÐÐ ÐžÐ›Ð•Ð™\n" << endl;
+    cout << "Ð”Ð»Ñ Ð³ÐµÐ½ÐµÑ€Ð°Ñ†Ð¸Ð¸ Ð¿Ð°Ñ€Ð¾Ð»ÐµÐ¹ Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ»ÐµÐ´ÑƒÑŽÑ‰Ð¸Ðµ Ð´Ð°Ð½Ð½Ñ‹Ðµ:" << endl;
 }
 
 int check_numeric_password(int p)
@@ -18,7 +18,7 @@ int check_numeric_password(int p)
     {
         cin.clear();
         cin.ignore(32767, '\n');
-        cout << "Äëèíà ïàðîëÿ çàäà¸òñÿ ïîëîæèòåëüíûì ÷èñëîì\n";
+        cout << "Ð”Ð»Ð¸Ð½Ð° Ð¿Ð°Ñ€Ð¾Ð»Ñ Ð·Ð°Ð´Ð°Ñ‘Ñ‚ÑÑ Ð¿Ð¾Ð»Ð¾Ð¶Ð¸Ñ‚ÐµÐ»ÑŒÐ½Ñ‹Ð¼ Ñ‡Ð¸ÑÐ»Ð¾Ð¼\n";
         return 0;
     }
     else
@@ -32,7 +32,7 @@ int get_length_password()
 {
     while (true)
     {
-        cout << " 1. Äëèíà ïàðîëÿ —  ";
+        cout << " 1. Ð”Ð»Ð¸Ð½Ð° Ð¿Ð°Ñ€Ð¾Ð»Ñ â€”  ";
         int length_password;
         cin >> length_password;       
 
@@ -40,7 +40,7 @@ int get_length_password()
         {
             cin.clear();
             cin.ignore(32767, '\n');
-            cout << "Äëèíà ïàðîëÿ çàäà¸òñÿ ÷èñëîì\n";
+            cout << "Ð”Ð»Ð¸Ð½Ð° Ð¿Ð°Ñ€Ð¾Ð»Ñ Ð·Ð°Ð´Ð°Ñ‘Ñ‚ÑÑ Ñ‡Ð¸ÑÐ»Ð¾Ð¼\n";
         }
         else if (check_numeric_password(length_password) != 0)
             return length_password;
@@ -55,7 +55,7 @@ int check_numeric_amount(int a)
     {
         cin.clear();
         cin.ignore(32767, '\n');
-        cout << "Êîëè÷åñòâî ãåíåðèðóåìûõ ïàðîëåé çàäà¸òñÿ ïîëîæèòåëüíûì ÷èñëîì\n";
+        cout << "ÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð³ÐµÐ½ÐµÑ€Ð¸Ñ€ÑƒÐµÐ¼Ñ‹Ñ… Ð¿Ð°Ñ€Ð¾Ð»ÐµÐ¹ Ð·Ð°Ð´Ð°Ñ‘Ñ‚ÑÑ Ð¿Ð¾Ð»Ð¾Ð¶Ð¸Ñ‚ÐµÐ»ÑŒÐ½Ñ‹Ð¼ Ñ‡Ð¸ÑÐ»Ð¾Ð¼\n";
         return 0;
     }
     else
@@ -69,7 +69,7 @@ int get_amount_of_passwords()
 {
     while (true)
     {
-        cout << " 2. Êîëè÷åñòâî ãåíåðèðóåìûõ ïàðîëåé — ";
+        cout << " 2. ÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð³ÐµÐ½ÐµÑ€Ð¸Ñ€ÑƒÐµÐ¼Ñ‹Ñ… Ð¿Ð°Ñ€Ð¾Ð»ÐµÐ¹ â€” ";
         int amount_of_passwords;
         cin >> amount_of_passwords;
 
@@ -77,7 +77,7 @@ int get_amount_of_passwords()
         {
             cin.clear();
             cin.ignore(32767, '\n');
-            cout << "Êîëè÷åñòâî ãåíåðèðóåìûõ ïàðîëåé çàäà¸òñÿ ÷èñëîì\n";
+            cout << "ÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð³ÐµÐ½ÐµÑ€Ð¸Ñ€ÑƒÐµÐ¼Ñ‹Ñ… Ð¿Ð°Ñ€Ð¾Ð»ÐµÐ¹ Ð·Ð°Ð´Ð°Ñ‘Ñ‚ÑÑ Ñ‡Ð¸ÑÐ»Ð¾Ð¼\n";
         }
         else if (check_numeric_amount(amount_of_passwords) != 0)
             return amount_of_passwords;
@@ -105,14 +105,14 @@ bool get_special_chars()
     while (true)
     {
         char use_of_special_chars;
-        cout << " 3. Èñïîëüçîâàòü ñïåöèàëüíûå ñèìâîëû (Y/N) — ";
+        cout << " 3. Ð˜ÑÐ¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÑŒ ÑÐ¿ÐµÑ†Ð¸Ð°Ð»ÑŒÐ½Ñ‹Ðµ ÑÐ¸Ð¼Ð²Ð¾Ð»Ñ‹ (Y/N) â€” ";
         cin >> use_of_special_chars;
 
         if (use_of_special_chars != 89 && use_of_special_chars != 78 && use_of_special_chars != 121 && use_of_special_chars != 110)
         {
             cin.clear();
             cin.ignore(32767, '\n');
-            cout << "Îïðåäåëèòå âûáîð ñïåöèàëüíûõ ñèìâîëîâ (Y/N)\n";
+            cout << "ÐžÐ¿Ñ€ÐµÐ´ÐµÐ»Ð¸Ñ‚Ðµ Ð²Ñ‹Ð±Ð¾Ñ€ ÑÐ¿ÐµÑ†Ð¸Ð°Ð»ÑŒÐ½Ñ‹Ñ… ÑÐ¸Ð¼Ð²Ð¾Ð»Ð¾Ð² (Y/N)\n";
         }
         else if (check_special_chars(use_of_special_chars))
             return true;
@@ -126,14 +126,14 @@ bool calc_safety()
     while (true)
     {
         char use_calc_safety;
-        cout << " 4. Âû÷èñëèòü íàä¸æíîñòü (Y/N) — ";
+        cout << " 4. Ð’Ñ‹Ñ‡Ð¸ÑÐ»Ð¸Ñ‚ÑŒ Ð½Ð°Ð´Ñ‘Ð¶Ð½Ð¾ÑÑ‚ÑŒ (Y/N) â€” ";
         cin >> use_calc_safety;
 
         if (use_calc_safety != 89 && use_calc_safety != 78 && use_calc_safety != 121 && use_calc_safety != 110)
         {
             cin.clear();
             cin.ignore(32767, '\n');
-            cout << "Îïðåäåëèòå íåîáõîäèìîñòü âû÷èñëåíèÿ íàä¸æíîñòè (Y/N)\n";
+            cout << "ÐžÐ¿Ñ€ÐµÐ´ÐµÐ»Ð¸Ñ‚Ðµ Ð½ÐµÐ¾Ð±Ñ…Ð¾Ð´Ð¸Ð¼Ð¾ÑÑ‚ÑŒ Ð²Ñ‹Ñ‡Ð¸ÑÐ»ÐµÐ½Ð¸Ñ Ð½Ð°Ð´Ñ‘Ð¶Ð½Ð¾ÑÑ‚Ð¸ (Y/N)\n";
         }
         else if (check_special_chars(use_calc_safety))
             return true;
@@ -147,14 +147,14 @@ bool need_file()
     while (true)
     {
         char use_need_file;
-        cout << " 5. Çàïèñàòü ðåçóëüòàòû ðàáîòû â ôàéë (Y/N) — ";
+        cout << " 5. Ð—Ð°Ð¿Ð¸ÑÐ°Ñ‚ÑŒ Ñ€ÐµÐ·ÑƒÐ»ÑŒÑ‚Ð°Ñ‚Ñ‹ Ñ€Ð°Ð±Ð¾Ñ‚Ñ‹ Ð² Ñ„Ð°Ð¹Ð» (Y/N) â€” ";
         cin >> use_need_file;
 
         if (use_need_file != 89 && use_need_file != 78 && use_need_file != 121 && use_need_file != 110)
         {
             cin.clear();
             cin.ignore(32767, '\n');
-            cout << "Îïðåäåëèòå íåîáõîäèìîñòü çàïèñè ðåçóëüòàòà ðàáîòû â ôàéë (Y/N)\n";
+            cout << "ÐžÐ¿Ñ€ÐµÐ´ÐµÐ»Ð¸Ñ‚Ðµ Ð½ÐµÐ¾Ð±Ñ…Ð¾Ð´Ð¸Ð¼Ð¾ÑÑ‚ÑŒ Ð·Ð°Ð¿Ð¸ÑÐ¸ Ñ€ÐµÐ·ÑƒÐ»ÑŒÑ‚Ð°Ñ‚Ð° Ñ€Ð°Ð±Ð¾Ñ‚Ñ‹ Ð² Ñ„Ð°Ð¹Ð» (Y/N)\n";
         }
         else if (check_special_chars(use_need_file))
             return true;
