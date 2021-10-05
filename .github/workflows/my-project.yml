@@ -4,15 +4,25 @@
 
 name: My-Project
 env :
-  APPLICATION_NAME    : "PasswordGenerator"
+  APPLICATION_NAME: "PasswordGenerator"
 
 on:
   push:
     branches: [ main ]
 
 jobs:
+  check:
+    runs-on: ubuntu-20.04
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Check codestyle
+        run: git ls-files *.{cpp,h} | xargs clang-format -i && git diff --exit-code
+
   deploy_project:
     runs-on     : windows-latest
+    needs       : [check]
 
     steps:       
       - name: Greeting
